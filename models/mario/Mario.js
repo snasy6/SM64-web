@@ -1,3 +1,137 @@
+// Mario
+
+// 0x04000000 # solid color blue - butt, left thigh, right thigh - all poly types
+static const Lights1 mario_blue_lights_group = gdSPDefLights1(
+    0x00, 0x00, 0x7f,
+    0x00, 0x00, 0xff, 0x28, 0x28, 0x28
+);
+
+// 0x04000018 # solid color red - left & right arm, torso (tshirt part), caps - all poly types
+static const Lights1 mario_red_lights_group = gdSPDefLights1(
+    0x7f, 0x00, 0x00,
+    0xff, 0x00, 0x00, 0x28, 0x28, 0x28
+);
+
+// 0x04000030 # solid color white - metal butt & left thigh - normal left & right hand closed & open (with cap too) and all wings - all poly types
+static const Lights1 mario_white_lights_group = gdSPDefLights1(
+    0x7f, 0x7f, 0x7f,
+    0xff, 0xff, 0xff, 0x28, 0x28, 0x28
+);
+
+// 0x04000048 # solid color brown 1 - foot - all poly types
+static const Lights1 mario_brown1_lights_group = gdSPDefLights1(
+    0x39, 0x0e, 0x07,
+    0x72, 0x1c, 0x0e, 0x28, 0x28, 0x28
+);
+
+// 0x04000060 # solid color beige skin - face (cap on and off dls) - all poly types
+static const Lights1 mario_beige_lights_group = gdSPDefLights1(
+    0x7f, 0x60, 0x3c,
+    0xfe, 0xc1, 0x79, 0x28, 0x28, 0x28
+);
+
+// 0x04000078  # solid color brown 2 - hair - all poly types
+static const Lights1 mario_brown2_lights_group = gdSPDefLights1(
+    0x39, 0x03, 0x00,
+    0x73, 0x06, 0x00, 0x28, 0x28, 0x28
+);
+
+// 0x04000090
+ALIGNED8 static const Texture mario_texture_metal[] = {
+#include "actors/mario/mario_metal.rgba16.inc.c"
+};
+
+// 0x04001090
+ALIGNED8 static const Texture mario_texture_yellow_button[] = {
+#include "actors/mario/mario_overalls_button.rgba16.inc.c"
+};
+
+// 0x04001890
+ALIGNED8 static const Texture mario_texture_m_logo[] = {
+#include "actors/mario/mario_logo.rgba16.inc.c"
+};
+
+// 0x04002090
+ALIGNED8 static const Texture mario_texture_hair_sideburn[] = {
+#include "actors/mario/mario_sideburn.rgba16.inc.c"
+};
+
+// 0x04002890
+ALIGNED8 static const Texture mario_texture_mustache[] = {
+#include "actors/mario/mario_mustache.rgba16.inc.c"
+};
+
+// 0x04003090
+ALIGNED8 static const Texture mario_texture_eyes_front[] = {
+#include "actors/mario/mario_eyes_center.rgba16.inc.c"
+};
+
+// 0x04003890
+ALIGNED8 static const Texture mario_texture_eyes_half_closed[] = {
+#include "actors/mario/mario_eyes_half_closed.rgba16.inc.c"
+};
+
+// 0x04004090
+ALIGNED8 static const Texture mario_texture_eyes_closed[] = {
+#include "actors/mario/mario_eyes_closed.rgba16.inc.c"
+};
+
+// Unreferenced
+// 0x04004890
+ALIGNED8 static const Texture mario_texture_eyes_closed_unused1[] = {
+#include "actors/mario/mario_eyes_closed_unused_0.rgba16.inc.c"
+};
+
+// Unreferenced
+// 0x04005090
+ALIGNED8 static const Texture mario_texture_eyes_closed_unused2[] = {
+#include "actors/mario/mario_eyes_closed_unused_1.rgba16.inc.c"
+};
+
+// 0x04005890
+ALIGNED8 static const Texture mario_texture_eyes_right[] = {
+#include "actors/mario/mario_eyes_left_unused.rgba16.inc.c"
+};
+
+// 0x04006090
+ALIGNED8 static const Texture mario_texture_eyes_left[] = {
+#include "actors/mario/mario_eyes_right_unused.rgba16.inc.c"
+};
+
+// 0x04006890
+ALIGNED8 static const Texture mario_texture_eyes_up[] = {
+#include "actors/mario/mario_eyes_up_unused.rgba16.inc.c"
+};
+
+// 0x04007090
+ALIGNED8 static const Texture mario_texture_eyes_down[] = {
+#include "actors/mario/mario_eyes_down_unused.rgba16.inc.c"
+};
+
+// 0x04007890
+ALIGNED8 static const Texture mario_texture_eyes_dead[] = {
+#include "actors/mario/mario_eyes_dead.rgba16.inc.c"
+};
+
+// 0x04008090
+ALIGNED8 static const Texture mario_texture_wings_half_1[] = {
+#include "actors/mario/mario_wing.rgba16.inc.c"
+};
+
+// 0x04009090
+ALIGNED8 static const Texture mario_texture_wings_half_2[] = {
+#include "actors/mario/mario_wing_tip.rgba16.inc.c"
+};
+
+// 0x0400A090
+ALIGNED8 static const Texture mario_texture_metal_wings_half_1[] = {
+#include "actors/mario/mario_metal_wing_unused.rgba16.inc.c"
+};
+
+// 0x0400B090
+ALIGNED8 static const Texture mario_texture_metal_wings_half_2[] = {
+#include "actors/mario/mario_metal_wing_tip_unused.rgba16.inc.c"
+};
 
 
 
@@ -8,10 +142,10 @@ const mario_butt_vrtx_g1 = {
   [73,  11,   0, 0, 0, 0, 0x7e, 0x04, 0x00, 0x00]
   [55, -61, -36, 0, 0, 0, 0x67, 0xbe, 0xe1, 0x00]
   [44, -10, -92, 0, 0, 0, 0x4f, 0xf2, 0x9e, 0x00]
-  [7,   33,  95, 0, 0, 0, 0xe6, 0x26, 0x75, 0x00]
+  [ 7,  33,  95, 0, 0, 0, 0xe6, 0x26, 0x75, 0x00]
   [44,  -9,  92, 0, 0, 0, 0x4f, 0xf2, 0x62, 0x00]
   [43,  40,  91, 0, 0, 0, 0x4e, 0x30, 0x57, 0x00]
-  [8,   -8, -99, 0, 0, 0, 0xf3, 0xee, 0x84, 0x00]
+  [ 8,  -8, -99, 0, 0, 0, 0xf3, 0xee, 0x84, 0x00]
   [36, -51, -79, 0, 0, 0, 0x30, 0xb8, 0xa4, 0x00]
   [26, -74, -46, 0, 0, 0, 0x18, 0x88, 0xe2, 0x00]
   [36, -52,  79, 0, 0, 0, 0x30, 0xb8, 0x5c, 0x00]
@@ -19,22 +153,21 @@ const mario_butt_vrtx_g1 = {
   [55, -61,  36, 0, 0, 0, 0x60, 0xb3, 0x1a, 0x00]
 };
 
-// 0x0400C180
-static const Vtx mario_butt_dl_vertex_group2[] = {
-    {{{    -5,     59,     72}, 0, {     0,      0}, {0xc0, 0x52, 0x47, 0x00}}},
-    {{{    -9,     73,     34}, 0, {     0,      0}, {0xbe, 0x6a, 0x12, 0x00}}},
-    {{{   -32,     40,     39}, 0, {     0,      0}, {0x8b, 0x25, 0x1d, 0x00}}},
-    {{{    52,     70,     38}, 0, {     0,      0}, {0x53, 0x5d, 0x16, 0x00}}},
-    {{{    22,     82,     26}, 0, {     0,      0}, {0x07, 0x7d, 0x11, 0x00}}},
-    {{{    27,     72,     63}, 0, {     0,      0}, {0x06, 0x6c, 0x42, 0x00}}},
-    {{{    43,     40,    -91}, 0, {     0,      0}, {0x4e, 0x30, 0xa9, 0x00}}},
-    {{{    27,     72,    -63}, 0, {     0,      0}, {0x07, 0x6b, 0xbe, 0x00}}},
-    {{{    52,     70,    -39}, 0, {     0,      0}, {0x59, 0x56, 0xe5, 0x00}}},
-    {{{    -5,     59,    -72}, 0, {     0,      0}, {0xc0, 0x52, 0xb9, 0x00}}},
-    {{{   -17,     32,    -79}, 0, {     0,      0}, {0xa4, 0x23, 0xb1, 0x00}}},
-    {{{   -32,     40,    -39}, 0, {     0,      0}, {0x89, 0x25, 0xeb, 0x00}}},
-    {{{    73,     11,      0}, 0, {     0,      0}, {0x7e, 0x04, 0x00, 0x00}}},
-    {{{    43,     40,     91}, 0, {     0,      0}, {0x4e, 0x30, 0x57, 0x00}}},
+const mario_butt_vrtx_g2 = {
+  [ -5, 59,  72, 0, 0, 0, 0xc0, 0x52, 0x47, 0x00]
+  [ -9, 73,  34, 0, 0, 0, 0xbe, 0x6a, 0x12, 0x00]
+  [-32, 40,  39, 0, 0, 0, 0x8b, 0x25, 0x1d, 0x00]
+  [ 52, 70,  38, 0, 0, 0, 0x53, 0x5d, 0x16, 0x00]
+  [ 22, 82,  26, 0, 0, 0, 0x07, 0x7d, 0x11, 0x00]
+  [ 27, 72,  63, 0, 0, 0, 0x06, 0x6c, 0x42, 0x00]
+  [ 43, 40, -91, 0, 0, 0, 0x4e, 0x30, 0xa9, 0x00]
+  [ 27, 72, -63, 0, 0, 0, 0x07, 0x6b, 0xbe, 0x00]
+  [ 52, 70, -39, 0, 0, 0, 0x59, 0x56, 0xe5, 0x00]
+  [ -5, 59, -72, 0, 0, 0, 0xc0, 0x52, 0xb9, 0x00]
+  [-17, 32, -79, 0, 0, 0, 0xa4, 0x23, 0xb1, 0x00]
+  [-32, 40, -39, 0, 0, 0, 0x89, 0x25, 0xeb, 0x00]
+  [ 73, 11,   0, 0, 0, 0, 0x7e, 0x04, 0x00, 0x00]
+  [ 43, 40,  91, 0, 0, 0, 0x4e, 0x30, 0x57, 0x00]
 };
 
 // 0x0400C260
