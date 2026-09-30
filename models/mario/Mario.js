@@ -213,7 +213,7 @@ const mario_butt_vrtx_g4 = [
 ];
 
 
-const mario_butt_vrtx_g4 = [
+const mario_butt_vrtx_g5 = [
     [ -5,  59, -72, 0, 0, 0, 0xc0, 0x52, 0xb9, 0x00],
     [ -9,  73, -34, 0, 0, 0, 0xc2, 0x6b, 0xe6, 0x00],
     [ 27,  72, -63, 0, 0, 0, 0x07, 0x6b, 0xbe, 0x00],
