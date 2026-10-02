@@ -2,17 +2,22 @@
 // i basicaly stole this... so, sorry to the sm64js devs! 
 // but i made easy to read so your welcome
 // go to there repo i forked it btw its the exact 
-function define_light = (ar, ag, ab, r1, g1, b1, x1, y1, z1) => {
-  return {
-    ambient : {colour : [ar, ag, ab] },
-    light : [
-      {
-        colour : [r1, g1, b1],
-        direction : [x1, y1, z1]
-      }
-    ]
-  }
+
+function gsp_define_light
+  
+
+export const gdSPDefLights1 = (ar, ag, ab, r1, g1, b1, x1, y1, z1) => {
+    return {
+        a: { col: [ar, ag, ab ] },
+        l: [
+            {
+                col: [ r1, g1, b1 ],
+                dir: [ x1, y1, z1 ]
+            }
+        ]
+    }
 }
+
 
 export const gSP1Triangle = (verticeslist, vrtx0, vrtx1, vrtx2, flag) => {
     verticeslist.push({
