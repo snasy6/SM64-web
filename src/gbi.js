@@ -7,9 +7,9 @@ function gsp_vertices (vrtx_list, line) {
   let vrtx_group = [];
 
   for (let i = 0; i < 3; i++){
-    let vrtx = vrtx_list[line + i];
-    vrtx.push()
+    let vrtx_group = vrtx_list[line + i];
+    vrtx_group.push()
   }
 
-  return vrtx;
+  return vrtx_group;
 }
