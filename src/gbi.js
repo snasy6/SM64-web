@@ -8,8 +8,8 @@ function gsp_vertices (vrtx_list, line) {
 
   for (let i = 0; i < 3; i++){
     let vrtx = vrtx_list[line + i];
-    vrtx_group.push()
+    vrtx.push()
   }
 
-  return vrtx_group;
+  return vrtx;
 }
