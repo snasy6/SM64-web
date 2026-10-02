@@ -22,21 +22,21 @@ const mario_white_lights_group = gdSPDefLights1(
 );
 
 // 0x04000048 # solid color brown 1 - foot - all poly types
-static const Lights1 mario_brown1_lights_group = gdSPDefLights1(
+const mario_brown1_lights_group = gdSPDefLights1(
     0x39, 0x0e, 0x07,
     0x72, 0x1c, 0x0e,
     0x28, 0x28, 0x28
 );
 
 // 0x04000060 # solid color beige skin - face (cap on and off dls) - all poly types
-static const Lights1 mario_beige_lights_group = gdSPDefLights1(
+const mario_beige_lights_group = gdSPDefLights1(
     0x7f, 0x60, 0x3c,
     0xfe, 0xc1, 0x79,
     0x28, 0x28, 0x28
 );
 
 // 0x04000078  # solid color brown 2 - hair - all poly types
-static const Lights1 mario_brown2_lights_group = gdSPDefLights1(
+const mario_brown2_lights_group = gdSPDefLights1(
     0x39, 0x03, 0x00,
     0x73, 0x06, 0x00,
     0x28, 0x28, 0x28
@@ -44,7 +44,7 @@ static const Lights1 mario_brown2_lights_group = gdSPDefLights1(
 
 // 0x04000090
 ALIGNED8 static const Texture mario_texture_metal[] = {
-#include "actors/mario/mario_metal.rgba16.inc.c"
+import "actors/mario/mario_metal.rgba16.inc.c"
 };
 
 // 0x04001090
