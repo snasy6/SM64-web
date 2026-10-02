@@ -3,9 +3,13 @@
 // but i made easy to read so your welcome
 // go to there repo i forked it btw its the exact 
 
-function gsp_vertices (vrtxlist, x, y, z)
-  while True {
-    int group_num = 0
-    vertex_group[group_num] == vrtxlist[x, y, z]
-    int group_num = group_num + 1 
+function gsp_vertices (vrtx_list, line) {
+  let vrtx_group = [];
+
+  for (let i = 0; i < 3; i++){
+    let vrtx = vrtx_list[line + i];
+    vrtx_group.push()
   }
+
+  return vrtx_group;
+}
