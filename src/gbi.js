@@ -2,7 +2,7 @@
 // i basicaly stole this... so, sorry to the sm64js devs! 
 // but i made easy to read so your welcome
 // go to there repo i forked it btw its the exact 
-export const gdSPDefLights1 = (ar, ag, ab, r1, g1, b1, x1, y1, z1) => {
+function define_light = (ar, ag, ab, r1, g1, b1, x1, y1, z1) => {
   return {
     ambient : {colour : [ar, ag, ab] },
     light : [
