@@ -21,3 +21,6 @@ export function gSPVertex(displaylist, vrtx_list, line, num_vertices, dest_index
         }
     });
 }
+
+
+
