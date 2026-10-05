@@ -3,12 +3,14 @@
 // but i made easy to read so your welcome
 // go to there repo i forked it btw its the exact 
 
-function gsp_vertices (vrtx_list, line) {
+function gsp_vertices(vrtx_list, line) {
   let vrtx_group = [];
 
-  for (let i = 0; i < 3; i++){
-    let vrtx_group = vrtx_list[line + i];
-    vrtx_group.push()
+  for (let i = 0; i < 3; i++) {
+    // Grab the vertex data from the list using the offset (line)
+    let item = vrtx_list[line + i];
+    // Push it into our collection array
+    vrtx_group.push(item);
   }
 
   return vrtx_group;
